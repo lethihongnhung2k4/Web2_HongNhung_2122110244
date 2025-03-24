@@ -1,7 +1,14 @@
-package com.example.lethihongnhung.domain;
+package com.example.lethihongnhung.domain.entity;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
+@Entity
 public class Banner {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int bannerId;
     private String name;
     private String image;
