@@ -3,7 +3,7 @@ package com.example.lethihongnhung.entity;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "User")
+@Table(name = "users")
 public class User {
 
     @Id
@@ -28,18 +28,6 @@ public class User {
     @Column(nullable = false, length = 255)
     private String password;
 
-    // Constructor không tham số
-    public User() {}
-
-    // Constructor đầy đủ tham số
-    public User(String name, int role, String phone, String address, String email, String password) {
-        this.name = name;
-        this.role = role;
-        this.phone = phone;
-        this.address = address;
-        this.email = email;
-        this.password = password;
-    }
 
     // Getter và Setter
     public int getUserId() {
